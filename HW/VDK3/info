@@ -1,0 +1,317 @@
+{
+  "uuid": "5e494203a5c3783b708f31a18e65f1e9",
+  "path": "Offline/VDK3",
+  "name": "VDK3",
+  "content": "",
+  "created_at": "2021-08-15 09:10:28",
+  "updated_at": "2021-08-30 04:25:45",
+  "stick": "",
+  "documents": [
+    {
+      "uuid": "2c2d256ae3e1beda79c3f394613a916e",
+      "title": "SCH",
+      "description": "",
+      "docType": "1",
+      "master": "",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "7347be22b5856eba3ffccb74c7404572": 1,
+        "2ef9d1bb92eb4f8db589fe96d45e036d": 1,
+        "b0248eb51e084227889f2cb84eab79c4": 8,
+        "24eeb2ceca08480b92b847b6a310acda": 12,
+        "4a2c584b8bdf2028156b6341ce399fe2": 2,
+        "5cbe824183374fac8e4c1ae848199ce3": 2,
+        "118590da739d4e9f9aad29bddea10c4c": 1,
+        "09104bcf69174429ba85f3b4f6a6069b": 1,
+        "291765c3e5838ddcfd72f3167accee80": 1,
+        "1e3402dce2b3d224c392a9b6d27d11d5": 2,
+        "58557ab5dac544259249b4981dd6020c": 1
+      },
+      "BOM": [
+        [
+          "Value",
+          "Quantity",
+          "Package",
+          "Components",
+          "CustomPara"
+        ],
+        [
+          "104",
+          7,
+          "C0603",
+          "C1,C4,C5,C6,C7,C8,C9",
+          {
+            "BOM_Supplier Part": "",
+            "BOM_Supplier": "",
+            "BOM_Manufacturer Part": "",
+            "puuid": "f187d3c25f9f43a29b67d3cfa364ee78",
+            "uuid": "24eeb2ceca08480b92b847b6a310acda"
+          }
+        ],
+        [
+          "106",
+          2,
+          "C0603",
+          "C2,C3",
+          {
+            "BOM_Supplier Part": "",
+            "BOM_Supplier": "",
+            "BOM_Manufacturer Part": "",
+            "puuid": "f187d3c25f9f43a29b67d3cfa364ee78",
+            "uuid": "24eeb2ceca08480b92b847b6a310acda"
+          }
+        ],
+        [
+          "105",
+          1,
+          "C0603",
+          "C10",
+          {
+            "BOM_Supplier Part": "",
+            "BOM_Supplier": "",
+            "BOM_Manufacturer Part": "",
+            "puuid": "f187d3c25f9f43a29b67d3cfa364ee78",
+            "uuid": "24eeb2ceca08480b92b847b6a310acda"
+          }
+        ],
+        [
+          "22p",
+          2,
+          "C0603",
+          "C11,C12",
+          {
+            "BOM_Supplier Part": "",
+            "BOM_Supplier": "",
+            "BOM_Manufacturer Part": "",
+            "puuid": "f187d3c25f9f43a29b67d3cfa364ee78",
+            "uuid": "24eeb2ceca08480b92b847b6a310acda"
+          }
+        ],
+        [
+          "MF-NSMF050-2",
+          1,
+          "F1206",
+          "F1",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Manufacturer": "BOURNS",
+            "BOM_Manufacturer Part": "MF-NSMF050-2",
+            "BOM_Supplier Part": "C75464",
+            "BOM_JLCPCB SMD": "Yes",
+            "BOM_LCSC Assembly": "Yes",
+            "puuid": "0ef2ffb5cc654f8ca80173df567cc6fb",
+            "uuid": "2ef9d1bb92eb4f8db589fe96d45e036d"
+          }
+        ],
+        [
+          "Header-Male-2.54_2x20",
+          2,
+          "HDR-TH_40P-P2.54-V-M-R2-C20-S2.54",
+          "H1,H2",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Manufacturer": "ReliaPro",
+            "BOM_Manufacturer Part": "Header-Male-2.54_2x20",
+            "BOM_Supplier Part": "C50980",
+            "BOM_JLCPCB Part Class": "Extended Part",
+            "puuid": "c33835c452fa4ef7836f90bb3b315c4d",
+            "uuid": "1e3402dce2b3d224c392a9b6d27d11d5"
+          }
+        ],
+        [
+          "Header-Male-2.54_1x4",
+          1,
+          "HDR-TH_4P-P2.54-V-M-1",
+          "H3",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Manufacturer": "Ckmtw",
+            "BOM_Manufacturer Part": "210S-1*4P L=11.6MMGold-plated black",
+            "BOM_Supplier Part": "C124378",
+            "BOM_JLCPCB Part Class": "Extended Part",
+            "puuid": "31a453d5adfc45cea944a6450adf2918",
+            "uuid": "58557ab5dac544259249b4981dd6020c"
+          }
+        ],
+        [
+          "3x6x2.5mm",
+          2,
+          "KEY-3.0*6.0",
+          "KEY1,KEY2",
+          {
+            "BOM_Supplier Part": "C5382",
+            "BOM_Supplier": "LCSC",
+            "BOM_Manufacturer": "ReliaPro",
+            "BOM_Manufacturer Part": "3x6x2.5mm",
+            "puuid": "fd04c2b37e3f4daf93a176ff1f28dfba",
+            "uuid": "4a2c584b8bdf2028156b6341ce399fe2"
+          }
+        ],
+        [
+          "LED-0603_R",
+          2,
+          "LED0603_RED",
+          "LED1,LED2",
+          {
+            "BOM_Manufacturer": "EVERLIGHT(台湾亿光)",
+            "BOM_Manufacturer Part": "19-217/R6C-AL1M2VY/3T",
+            "BOM_Supplier Part": "C72044",
+            "BOM_Supplier": "LCSC",
+            "puuid": "1efb3a885b5b4aecb6d41221a8f4d86b",
+            "uuid": "5cbe824183374fac8e4c1ae848199ce3"
+          }
+        ],
+        [
+          "1k",
+          2,
+          "R0603",
+          "R1,R2",
+          {
+            "BOM_Supplier Part": "",
+            "BOM_Supplier": "",
+            "BOM_Manufacturer Part": "",
+            "puuid": "1bf59dff03ec4233aa077dc7cf0e92a1",
+            "uuid": "b0248eb51e084227889f2cb84eab79c4"
+          }
+        ],
+        [
+          "22R",
+          2,
+          "R0603",
+          "R3,R4",
+          {
+            "BOM_Supplier Part": "",
+            "BOM_Supplier": "",
+            "BOM_Manufacturer Part": "",
+            "puuid": "1bf59dff03ec4233aa077dc7cf0e92a1",
+            "uuid": "b0248eb51e084227889f2cb84eab79c4"
+          }
+        ],
+        [
+          "10k",
+          2,
+          "R0603",
+          "R5,R6",
+          {
+            "BOM_Supplier Part": "",
+            "BOM_Supplier": "",
+            "BOM_Manufacturer Part": "",
+            "puuid": "1bf59dff03ec4233aa077dc7cf0e92a1",
+            "uuid": "b0248eb51e084227889f2cb84eab79c4"
+          }
+        ],
+        [
+          "1K5",
+          2,
+          "R0603",
+          "R7,R8",
+          {
+            "BOM_Supplier Part": "",
+            "BOM_Supplier": "",
+            "BOM_Manufacturer Part": "",
+            "puuid": "1bf59dff03ec4233aa077dc7cf0e92a1",
+            "uuid": "b0248eb51e084227889f2cb84eab79c4"
+          }
+        ],
+        [
+          "1117-3.3V",
+          1,
+          "SOT-223-3_L6.5-W3.4-P2.30-LS7.0-BR",
+          "U1",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Supplier Part": "C845411",
+            "BOM_Manufacturer": "TF",
+            "BOM_Manufacturer Part": "1117-1.2V",
+            "BOM_JLCPCB Part Class": "Extended Part",
+            "puuid": "02ae667aca734971be8a5f58143dd564",
+            "uuid": "118590da739d4e9f9aad29bddea10c4c"
+          }
+        ],
+        [
+          "STM32F103C8T6",
+          1,
+          "LQFP-48_L7.0-W7.0-P0.50-LS9.0-BL",
+          "U2",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Manufacturer": "STMicroelectronics",
+            "BOM_Manufacturer Part": "STM32F103C8T6",
+            "BOM_Supplier Part": "C8734",
+            "BOM_JLCPCB Part Class": "Basic Part",
+            "puuid": "4a13c433861640209b7106f419770da9",
+            "uuid": "7347be22b5856eba3ffccb74c7404572"
+          }
+        ],
+        [
+          "Mini USB",
+          1,
+          "MINI-USB-TH_USB-MINI-2",
+          "USB1",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Manufacturer": "ValuePro",
+            "BOM_Manufacturer Part": "MINI 5PFemale90Degree plate four feet copper shell LCPVinyl",
+            "BOM_Supplier Part": "C46398",
+            "BOM_JLCPCB Part Class": "Extended Part",
+            "puuid": "83c7c868ab2f47acad8284d4feafab39",
+            "uuid": "291765c3e5838ddcfd72f3167accee80"
+          }
+        ],
+        [
+          "8MHz",
+          1,
+          "HC-49S_L11.0-W4.4-P4.88",
+          "X1",
+          {
+            "BOM_Supplier": "LCSC",
+            "BOM_Manufacturer": "YXC",
+            "BOM_Manufacturer Part": "49S DIP Crystal insulation film",
+            "BOM_Supplier Part": "C35018",
+            "puuid": "a27d79934a5e450e8ec5b36942563cb2",
+            "uuid": "09104bcf69174429ba85f3b4f6a6069b"
+          }
+        ]
+      ],
+      "updateTime": 1629020198,
+      "createTime": 1628993514,
+      "histories": [],
+      "created_at": "2021-08-15 09:11:54",
+      "updated_at": "2021-08-15 16:36:38"
+    },
+    {
+      "uuid": "f4ebcd4a5ed2c6d28ca9deb80f212fec",
+      "puuid": "5e494203a5c3783b708f31a18e65f1e9",
+      "title": "PCB",
+      "filename": "PCB.json",
+      "description": "",
+      "docType": "3",
+      "master": "",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "f187d3c25f9f43a29b67d3cfa364ee78": 12,
+        "0ef2ffb5cc654f8ca80173df567cc6fb": 1,
+        "fd04c2b37e3f4daf93a176ff1f28dfba": 2,
+        "1efb3a885b5b4aecb6d41221a8f4d86b": 2,
+        "1bf59dff03ec4233aa077dc7cf0e92a1": 8,
+        "02ae667aca734971be8a5f58143dd564": 1,
+        "4a13c433861640209b7106f419770da9": 1,
+        "a27d79934a5e450e8ec5b36942563cb2": 1,
+        "83c7c868ab2f47acad8284d4feafab39": 1,
+        "c33835c452fa4ef7836f90bb3b315c4d": 2,
+        "31a453d5adfc45cea944a6450adf2918": 1
+      },
+      "BOM": [],
+      "updateTime": 1629168584,
+      "createTime": 1628996152,
+      "histories": [],
+      "created_at": "2021-08-15 09:55:52",
+      "updated_at": "2021-08-17 09:49:44"
+    }
+  ],
+  "sort": [],
+  "title": "VDK3",
+  "foldername": "VDK3",
+  "schfilename": "STM32F103C8.json",
+  "schfilemtime": 1630272339573
+}
