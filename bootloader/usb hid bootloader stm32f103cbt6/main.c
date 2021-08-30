@@ -13,15 +13,15 @@ int main(void)
 {
 	GPIO_InitTypeDef gpioInit;
 	
-	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA, ENABLE);
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC, ENABLE);
 	
 	gpioInit.GPIO_Mode = GPIO_Mode_IPU;
-	gpioInit.GPIO_Pin = GPIO_Pin_0;
+	gpioInit.GPIO_Pin = GPIO_Pin_13;
 	gpioInit.GPIO_Speed = GPIO_Speed_50MHz;
 	
-	GPIO_Init(GPIOA, &gpioInit);
+	GPIO_Init(GPIOC, &gpioInit);
 	
-	if(GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_0)) {
+	if(GPIO_ReadInputDataBit(GPIOC, GPIO_Pin_13)) {
 		p = (uint32_t *)ApplicationAddress;
 		if ((*p & 0xE0000000) == 0x20000000) {
 			JumpAddress = *(__IO uint32_t*) (ApplicationAddress + 4);

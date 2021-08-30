@@ -146,11 +146,22 @@ void EP1_In(void);
 
 void USB_Init(void)
 {
+	GPIO_InitTypeDef gpioInit;
 	
 	RCC_USBCLKConfig(RCC_USBCLKSource_PLLCLK_1Div5);
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_USB, ENABLE);
 	//cho phep usb hoat dong
 	_SetCNTR(0x00);
+	
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE);
+	
+	gpioInit.GPIO_Mode = GPIO_Mode_Out_PP;
+	gpioInit.GPIO_Pin = GPIO_Pin_7;
+	gpioInit.GPIO_Speed = GPIO_Speed_50MHz;
+	
+	GPIO_Init(GPIOB, &gpioInit);
+	
+	GPIO_SetBits(GPIOB, GPIO_Pin_7);
 }
 
 void USB_Task(void)
@@ -302,6 +313,7 @@ uint8_t u8Success = 1;
 static void EP0_Out(void) {
 	uint32_t i;
 	uint32_t n;
+	GPIO_InitTypeDef gpioInit;
 	
 	if (u8ControlState == DATA_STATE) {
 		if (u8Total <= EP0_SZ) {
@@ -390,7 +402,7 @@ static void EP0_Out(void) {
 						n += u8Ep0Buff[4];
 						
 						if ((n >= APP_BASE_ADDRESS) && (n < (APP_BASE_ADDRESS + APP_SIZE))) {
-							FlashUnlock();
+							FlashUnlock();							
 							if (WriteFlash(n, &u8Ep0Buff[8], 64)) {
 								u8Success = 1;
 							} else {
@@ -403,8 +415,13 @@ static void EP0_Out(void) {
 						break;
 					case 0x03:
 						//_SetBCDR(~BCDR_DPPU);
+						gpioInit.GPIO_Mode = GPIO_Mode_IN_FLOATING;
+						gpioInit.GPIO_Pin = GPIO_Pin_7;
+						gpioInit.GPIO_Speed = GPIO_Speed_50MHz;
+	
+						GPIO_Init(GPIOB, &gpioInit);
 						//around 13ms
-						for (i = 0; i < 0x1ffff; ++i) {
+						for (i = 0; i < 0x2ffff; ++i) {
 						}
 						NVIC_SystemReset();
 						break;

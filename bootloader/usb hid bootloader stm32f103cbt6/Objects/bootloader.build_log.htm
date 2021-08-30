@@ -22,25 +22,26 @@ Dialog DLL:      TARMSTM.DLL V1.66.0.0
  
 <h2>Project:</h2>
 D:\git\VDK3\bootloader\usb hid bootloader stm32f103cbt6\bootloader.uvprojx
-Project File Date:  08/30/2021
+Project File Date:  08/31/2021
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Rebuild target 'bootloader'
-assembling startup_stm32f10x_md.s...
-compiling delay.c...
-compiling misc.c...
 compiling flash.c...
 compiling main.c...
+compiling misc.c...
 compiling usb_mem.c...
-compiling stm32f10x_gpio.c...
+compiling delay.c...
+assembling startup_stm32f10x_md.s...
 compiling stm32f10x_rcc.c...
-compiling system_stm32f10x.c...
+compiling stm32f10x_gpio.c...
+compiling stm32f10x_flash.c...
 compiling usb.c...
 compiling usb_regs.c...
 compiling stm32f10x_tim.c...
+compiling system_stm32f10x.c...
 linking...
-Program Size: Code=3328 RO-data=472 RW-data=32 ZI-data=1296  
+Program Size: Code=3548 RO-data=472 RW-data=32 ZI-data=1296  
 FromELF: creating hex file...
 After Build - User command #2: fromelf --bin ".\Objects\bootloader.axf" --output ".\Objects\bootloader.bin"
 ".\Objects\bootloader.axf" - 0 Error(s), 0 Warning(s).
@@ -58,6 +59,7 @@ Package Vendor: Keil
                 Keil.STM32F1xx_DFP.2.3.0
                 STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
    * Component: Startup Version: 1.0.0
+   * Component: Flash Version: 3.5.0
    * Component: Framework Version: 3.5.1
    * Component: GPIO Version: 3.5.0
    * Component: RCC Version: 3.5.0
@@ -75,17 +77,21 @@ Package Vendor: Keil
    * Component: ARM::CMSIS:CORE:5.5.0
 
    * Component: Keil::Device:Startup:1.0.0
-      Source file:   Device\Source\ARM\startup_stm32f10x_md.s
       Source file:   Device\Source\system_stm32f10x.c
-      Include file:  RTE_Driver\Config\RTE_Device.h
       Source file:   Device\Source\ARM\STM32F1xx_OPT.s
+      Include file:  RTE_Driver\Config\RTE_Device.h
+      Source file:   Device\Source\ARM\startup_stm32f10x_md.s
+
+   * Component: Keil::Device:StdPeriph Drivers:Flash:3.5.0
+      Include file:  Device\StdPeriph_Driver\inc\stm32f10x_flash.h
+      Source file:   Device\StdPeriph_Driver\src\stm32f10x_flash.c
 
    * Component: Keil::Device:StdPeriph Drivers:Framework:3.5.1
-      Include file:  Device\StdPeriph_Driver\templates\stm32f10x_it.h
-      Include file:  Device\StdPeriph_Driver\inc\misc.h
       Source file:   Device\StdPeriph_Driver\templates\stm32f10x_conf.h
-      Source file:   Device\StdPeriph_Driver\src\misc.c
       Source file:   Device\StdPeriph_Driver\templates\stm32f10x_it.c
+      Source file:   Device\StdPeriph_Driver\src\misc.c
+      Include file:  Device\StdPeriph_Driver\inc\misc.h
+      Include file:  Device\StdPeriph_Driver\templates\stm32f10x_it.h
 
    * Component: Keil::Device:StdPeriph Drivers:GPIO:3.5.0
       Include file:  Device\StdPeriph_Driver\inc\stm32f10x_gpio.h
@@ -98,7 +104,7 @@ Package Vendor: Keil
    * Component: Keil::Device:StdPeriph Drivers:TIM:3.5.0
       Include file:  Device\StdPeriph_Driver\inc\stm32f10x_tim.h
       Source file:   Device\StdPeriph_Driver\src\stm32f10x_tim.c
-Build Time Elapsed:  00:00:01
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>

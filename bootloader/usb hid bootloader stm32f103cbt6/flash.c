@@ -10,48 +10,22 @@ void FlashLock(void) {
 }
 
 uint32_t FormatFlashPage(uint32_t page) {
-	while(FLASH->SR & FLASH_SR_BSY);
-	
-	FLASH->SR = 0x34;
-	
-	FLASH->CR |= FLASH_CR_PER;
-
-	FLASH->AR = page;
-
-	FLASH->CR |= FLASH_CR_STRT;
-
-	while(FLASH->SR & FLASH_SR_BSY);
-
-	FLASH->CR &= ~FLASH_CR_PER;
-	
-	if (FLASH->SR & 0x14) {
-		return 0;
-	} else {
-		return 1;
-	}
+	FLASH_ClearFlag(FLASH_FLAG_EOP | FLASH_FLAG_PGERR | FLASH_FLAG_WRPRTERR);	
+	return FLASH_ErasePage(page) == FLASH_COMPLETE;
 }
 
 uint32_t WriteFlash(uint32_t page, uint8_t *data, uint16_t size) {
 	uint16_t i;
 	uint16_t tmp;
 	
-	while(FLASH->SR & FLASH_SR_BSY);
-	
-	FLASH->SR = 0x34;
-
-	FLASH->CR |= FLASH_CR_PG;
+	FLASH_ClearFlag(FLASH_FLAG_EOP | FLASH_FLAG_PGERR | FLASH_FLAG_WRPRTERR);
 
 	for(i = 0; i < size; i += 2) {
 		tmp = data[i] | (data[i + 1] << 8);
-		*(volatile uint16_t *)(page + i) = tmp;
-
-		while(FLASH->SR & FLASH_SR_BSY);
-		if (FLASH->SR & 0x14) {
+		if (FLASH_ProgramHalfWord(page + i, tmp) != FLASH_COMPLETE) {
 			return 0;
 		}
 	}
-
-	FLASH->CR &= ~FLASH_CR_PG;
 	
 	return 1;
 }

@@ -4,7 +4,7 @@
 #include "stm32f10x.h"                  // Device header
 
 #define DEV_INFO				"STM32F103CBT6"
-#define BOOT_VER				"BOOTLOADER V210825"
+#define BOOT_VER				"BOOTLOADER V210831"
 #define APP_BASE_ADDRESS 		0x08001000
 #define APP_SIZE 				126976 		//28KB
 #define FLASH_ERASE_PAGE_SIZE 	1024
